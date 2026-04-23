@@ -1,0 +1,36 @@
+\begin{table}
+\centering
+\begin{talltblr}[         %% tabularray outer open
+entry=none,label=none,
+note{}={+ p \num{< 0.1}, * p \num{< 0.05}, ** p \num{< 0.01}, *** p \num{< 0.001}},
+]                     %% tabularray outer close
+{                     %% tabularray inner open
+colspec={Q[]Q[]Q[]Q[]Q[]},
+hline{2}={1-5}{solid, black, 0.05em},
+hline{18}={1-5}{solid, black, 0.05em},
+hline{1}={1-5}{solid, black, 0.08em},
+hline{20}={1-5}{solid, black, 0.08em},
+column{2-5}={}{halign=c},
+column{1}={}{halign=l},
+}                     %% tabularray inner close
+& Level & Log-Log & Controls & Interaction \\
+(Intercept) & \num{110.421}*** & \num{7.146}*** & \num{6.552}*** & \num{7.005}*** \\
+& (\num{9.037}) & (\num{0.276}) & (\num{0.398}) & (\num{0.282}) \\
+income & \num{-0.021}*** &  &  &  \\
+& (\num{0.004}) &  &  &  \\
+log(income) &  & \num{-0.512}*** & \num{-0.340}*** & \num{-0.432}*** \\
+&  & (\num{0.049}) & (\num{0.078}) & (\num{0.057}) \\
+regionAmericas &  &  & \num{-0.550}** & \num{-0.416}* \\
+&  &  & (\num{0.184}) & (\num{0.162}) \\
+regionAsia &  &  & \num{-0.713}*** & \num{-0.629}** \\
+&  &  & (\num{0.207}) & (\num{0.203}) \\
+regionEurope &  &  & \num{-1.034}*** & \num{-0.759}*** \\
+&  &  & (\num{0.256}) & (\num{0.211}) \\
+oilyes &  &  & \num{0.640} & \num{-4.383} \\
+&  &  & (\num{0.472}) & (\num{3.019}) \\
+log(income) × oilyes &  &  &  & \num{0.808}+ \\
+&  &  &  & (\num{0.481}) \\
+R2 & \num{0.109} & \num{0.502} & \num{0.646} & \num{0.700} \\
+Num.Obs. & \num{101} & \num{101} & \num{101} & \num{101} \\
+\end{talltblr}
+\end{table}
